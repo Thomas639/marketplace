@@ -4,6 +4,7 @@ import './App.css';
 import Marketplace from '../abis/Marketplace.json'
 import Navbar from './Navbar'
 import Main from './Main'
+import Myproducts from './Myproducts'
 
 
 class App extends Component {
@@ -81,6 +82,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <Navbar account={this.state.account} />
@@ -97,6 +99,7 @@ class App extends Component {
             </main>
           </div>
         </div>
+        <Myproducts products={this.state.products} account={this.state.account}/>
       </div>
     );
   }

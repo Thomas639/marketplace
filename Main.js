@@ -30,7 +30,7 @@ class Main extends Component {
               placeholder="Product Price"
               required />
           </div>
-          <button type="submit" className="btn btn-primary">Add Product</button>
+          <button type="submit" className="btn btn-success">Add Product</button>
         </form>
         <p>&nbsp;</p>
         <h2>Buy Product</h2>
@@ -55,6 +55,7 @@ class Main extends Component {
                   <td>
                     { !product.purchased
                       ? <button
+                          className="btn btn-success"
                           name={product.id}
                           value={product.price}
                           onClick={(event) => {
@@ -70,6 +71,17 @@ class Main extends Component {
               )
             })}
           </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Owner</th>
+            </tr>
+          </thead>
+
         </table>
       </div>
     );
